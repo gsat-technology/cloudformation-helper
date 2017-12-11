@@ -1,0 +1,9 @@
+
+stack:
+  name: <stack_name>
+  template: <path_to_cloudformation_template>
+  parameters:
+    ParameterOne: someValue1
+    ParameterTwo: someValue2
+    ParameterThree: someValue3
+    

@@ -12,14 +12,19 @@ Clone this repo
 git clone https://github.com/gsat-technology/cloudformation-helper.git
 ```
 
-Add any parameter values to params.sh or empty all contents of this file if your template has no template parameters.
+Create a configuration file as per `example_config.yml`
+
+- `name`: the name of the stack you are updating
+- `template`: path (relative to cfh_update.yml) to your cloudformation template file
+- `parameters`: key/values for cloudformation template parameters (if any)
 
 Run
 ```
-./update_cf <stack_name> <path_to_template>
+./cfh_helper <path_to_example_config.yml>
 ```
 
 #### notes
 
-- Tested using bash on OS X
-
+- when using this, it might be useful just to keep the config file in the same directory as the cloudformation template and tracked in git (or perhaps not, if it contains secrets)
+- tested using bash on OS X
+- prob will fail on linux but I will fix at some point
