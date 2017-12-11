@@ -37,8 +37,6 @@ do
     fi
 done < "$paramsFile"
 
-echo $params
-exit
 
 #random string for change set name
 uuid=$(uuidgen)
