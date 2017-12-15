@@ -59,7 +59,7 @@ do
   echo $item | grep "stack_parameters" > /dev/null
   if [ $? -eq 0 ]
   then
-    clean=${item#stack_parameters_}
+    clean=${item#stack_parameters__}
     pair=(${clean//=/ })
     params="$params ParameterKey=${pair[0]},ParameterValue=${pair[1]} "
     continue
